@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+String.prototype.character = function() {
+  return this.replace(/[aeiou]+/g, ''); //replace a, e, i, o and u with nothing.
+}
+
+function submit() {
+  var input = document.getElementById('input').value;
+  document.getElementById('output').innerHTML = input.character();
+}
+</script>
+<input id="input" type="text">
+<div id="output"></div>
+<button onclick="submit()">Go!</button>
+</body>
+</html>

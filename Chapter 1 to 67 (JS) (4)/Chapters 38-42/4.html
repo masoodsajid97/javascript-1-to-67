@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+function calc(i, j, k, full, ave, perce)
+{
+ ave = (i + j + k) / 3.0;
+ perce = (ave / full)*100.0;
+}
+
+function main( )
+{
+ var a, b, c, full;
+ var av, perc;
+ document.write("Enter the marks received by the student in 3 subjects and the total possible marks for 1 paper:");
+ calc(12, 12, 12, 100, av, perc);
+ document.write("The average marks is.The percentage is ");
+ return 0;
+}
+</script>
+</body>
+</html>

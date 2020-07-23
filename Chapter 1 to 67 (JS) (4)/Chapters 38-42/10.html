@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	function myfunction()
+	{
+	var amount;
+	amount = prompt("Enter Amount For Withdraw")
+
+	document.write("\n\nRequired notes of Rs. 100  : "+ Math.floor(amount / 100)+"<br>");
+	document.write("\n\nRequired notes of Rs. 50   : "+ Math.floor((amount % 100) / 50)+"<br>");
+	document.write("\n\nRequired notes of Rs. 10   : "+ Math.floor((((amount % 100) % 50) / 10))+"<br>");
+	document.write("\n\nAmount still remaining Rs. : "+ Math.floor((((amount % 100) % 50) % 10))+"<br>");
+	}
+	myfunction()
+</script>
+
+</body>
+</html>

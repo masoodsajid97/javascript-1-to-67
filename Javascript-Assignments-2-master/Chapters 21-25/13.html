@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+var username = prompt("Enter Your Username")
+
+var error1 = String.fromCharCode(33);
+var error2 = String.fromCharCode(44);
+var error3 = String.fromCharCode(46);
+var error4 = String.fromCharCode(64);
+
+if (username.includes("!") || username.includes("@") || username.includes(",") || username.includes("."))
+ {
+ 	alert("Please enter a valid name");
+ }
+ else
+ {
+ 	alert("welcome "+username)
+ }
+</script>
+</body>
+</html>

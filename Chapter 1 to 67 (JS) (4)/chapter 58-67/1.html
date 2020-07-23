@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<div>
+<h1> DOM </h1>
+<div id="form-content" class="content">
+<label for="first-name">First Name</label>
+<input type="text" id="first-name" />
+<label for="last-name">Last Name</label>
+<input type="text" id="last-name" />
+<label for="email">Email</label>
+<input type="text" id="email" />
+</div>
+<div id="main-content" class="content">
+<p class="render"> First Name : Alex</p>
+<p class="render" id="lastName">Last Name: Bank</p>
+<p class="render"> Email : alexbank@example.com</p>
+<p class="render"> Country : Pakistan </p>
+<p class="render"> contact : +92 300 1234567</p>
+</div>
+</div>
+<script type="text/javascript">
+	 //Q1) Get element of id “main-content” and assign them in a variable
+	 var mcontent = document.getElementById('main-content');
+</script>
+<!-- Q2) Display all child elements of “main-content” element. -->
+<p>Click the button to get the tag names of the body element's children.</p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+
+
+<script>
+function myFunction() {
+  var c = document.body.children;
+  var txt = "";
+  var i;
+  for (i = 0; i < c.length; i++) {
+    txt = txt + c[i].tagName + "<br>";
+  }
+
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+<button onclick="msg()">Click to show render class text</button><br>
+
+<button onclick="node()">click to get node type</button>
+<p id="node"></p>
+
+<button onclick="node1()">click to get node type</button>
+<p id="node1"></p>
+
+<button onclick="getnodeposition()">click to get First & Last node Text</button>
+<p id="result"></p>
+
+<button onclick="nexpreviousnode()">click to get previous & next node of lastname</button>
+<p id="nextpreres"></p>
+
+<button onclick="parentnode()">click to get parent node and node type of email</button>
+<p id="parentres"></p>
+<!-- Q3) Get all elements of class “render” and show their innerHTML in browser. -->
+<script type="text/javascript">
+	function msg()
+	{
+	  var res1 = document.getElementsByClassName('render')[0].childNodes[0].textContent;
+	  var res2 = document.getElementsByClassName('render')[1].childNodes[0].textContent;
+	  var res3 = document.getElementsByClassName('render')[2].childNodes[0].textContent;
+	  var res4 = document.getElementsByClassName('render')[3].childNodes[0].textContent;
+	  var res5 = document.getElementsByClassName('render')[4].childNodes[0].textContent;
+	  document.write(res1+"<br>")
+	  document.write(res2+"<br>")
+	  document.write(res3+"<br>")
+	  document.write(res4+"<br>")
+	  document.write(res5+"<br>")
+
+	}
+</script>
+
+<!-- Q4)  Fill input value whose element id first-name using javascript -->
+
+<script type="text/javascript">
+	document.getElementById("first-name").value = "Enter First Name";
+	document.getElementById("last-name").value = "Enter Last Name";
+	document.getElementById("email").value = "Enter Email eg:example@gmail.com";
+</script>
+
+<!-- Question 2 1) What is node type of element having id “form-content”-->
+<script type="text/javascript">
+	function node() 
+	{
+	  var x = document.getElementById("form-content").nodeType;
+	  document.getElementById("node").innerHTML = x;
+	}
+/*Question 2 part 2*/
+	function node1()
+	{
+		var x = document.getElementById("lastName").nodeType;
+	  document.getElementById("node1").innerHTML = x;
+	}
+
+/*Question 2 part 4*/
+
+function getnodeposition()
+{
+  var res1 = document.getElementById("main-content").firstElementChild.innerHTML;
+  var res2 = document.getElementById("main-content").lastElementChild.innerHTML;
+  document.getElementById("result").innerHTML = res1+"<br>"+res2;
+}
+
+function nexpreviousnode()
+{
+	  var prev = document.getElementById("lastName").previousElementSibling.innerHTML;
+	  var next = document.getElementById("lastName").nextElementSibling.innerHTML;  
+	  document.getElementById('nextpreres').innerHTML="Previous Sibling"+prev+"<br>"+"Next Sibling"+next
+}
+
+function parentnode()
+{
+  var x = document.getElementById("email").parentNode.nodeName;
+  var nodetype = document.getElementById("email").nodeType;
+  document.getElementById("parentres").innerHTML = "Parent Node: "+x+"<br>"+"Node type of result: "+nodetype;
+
+
+
+}
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var current_hour = new Date("Sat Jun 20 2020 11:13:42 GMT+0500 (Pakistan Standard Time)")
+var old_hour = new Date("Sat Jun 20 2020 10:13:42 GMT+0500 (Pakistan Standard Time)")
+
+var time_difference =(current_hour.getTime() - old_hour.getTime()) / 1000;
+  time_difference /= (60 * 60);
+ Math.abs(Math.round(time_difference));
+
+document.write("Current date: Sat Jun 20 2020 11:13:42 GMT+0500 (Pakistan Standard Time)"+"<br>")
+document.write(time_difference+ " hour ago, it was Sat Jun 20 2020 10:13:42 GMT+0500 (Pakistan Standard Time)")
+
+</script>
+</body>
+</html>

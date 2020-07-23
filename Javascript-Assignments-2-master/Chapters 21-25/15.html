@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script>
+var regex_pass = /^[a-zA-Z][A-Za-z0-9]{6,12}$/
+var password = prompt("Enter Your Password")
+
+if (password.match(regex_pass))
+{
+	alert("Valid Password!")
+}
+else
+{
+	alert("Password cannot begin with a number\nPlease enter a valid password")
+}
+
+
+</script> 
+</body>
+</html>

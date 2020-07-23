@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<label>Enter Number to square</label><br>
+<input type="text" id="num" name=""><br>
+
+<button onclick="myfunc()">Click</button>
+
+<p id="result"></p>
+
+<script type="text/javascript">
+	function myfunc()
+	{
+		var number1 = document.getElementById("num").value;
+
+		document.getElementById("result").innerHTML = Math.pow(number1,2)
+
+	}
+</script>
+</body>
+</html>

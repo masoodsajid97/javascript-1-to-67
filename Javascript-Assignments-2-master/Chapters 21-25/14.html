@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script>
+var items=["cake","apple pie","cookie","chips","patties"]
+var search = prompt("Welcome to ABC bakery, what do you want to order Sir/Ma'am?")
+
+var result = items.indexOf(search)
+
+if (result>0) 
+{
+	document.write("<h2>Cookie is <b>available</b> at index "+result+" in our bakery</h2>")
+}
+else
+{
+	document.write("<h2>We are sorry. pastry is <b>not available</b> in our bakery</h2>")
+}
+</script> 
+</body>
+</html>

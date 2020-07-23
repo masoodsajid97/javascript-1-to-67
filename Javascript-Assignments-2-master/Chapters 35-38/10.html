@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<form id="form">
+	<label>Enter Your Text:</label>
+    <input type="text" id="txtinput" />
+</form>
+<script type="text/javascript">
+var palindrome = function (string) {
+    if (string == string.split('').reverse().join('')) {
+        alert(string + ' is palindrome.');
+    }
+    else {
+        alert(string + ' is not palindrome.');
+    }
+}
+
+document.getElementById('form').onsubmit = function() {
+   palindrome(document.getElementById('txtinput').value);
+    return false;
+}
+</script>
+</body>
+</html>

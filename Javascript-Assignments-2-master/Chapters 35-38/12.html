@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+function findLongestWord(str) {
+  const stringArray = str.split(" ");
+  const longestWord = stringArray.reduce((a, b) => {
+    if(b.length > a.length) {
+      return b;
+    } else {
+      return a;
+    }
+  });
+  return longestWord;
+}
+document.write("Example String: "+"Web Development Tutorial"+"<br>")
+document.write("Expected Output: "+findLongestWord("Web Development Tutorial"));
+</script>
+</body>
+</html>

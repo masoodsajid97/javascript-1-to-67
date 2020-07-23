@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	function leapyear(year)
+{
+return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+}
+document.write(leapyear(2012)+"<br>");
+document.write(leapyear(2016)+"<br>");
+document.write(leapyear(2020)+"<br>");
+document.write(leapyear(2010)+"<br>");
+document.write(leapyear(2007)+"<br>");
+</script>
+</body>
+</html>

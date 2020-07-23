@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var km, m, cm, f, inch
+km = prompt("Enter Distance In Kilometer")
+
+function meter()
+{
+m = km * 1000;
+ document.write("The distance in Meters: "+m+"<br>");
+}
+function centimeter()
+{
+cm = km * 1000 * 100;
+ document.write("The distance in Centimeters: "+cm+"<br>");
+}
+function feet()
+{
+f = km * 3280.84;
+document.write("The distance in Feet: "+f+"<br>");
+}
+function inches()
+{
+inch = km * 39370.08;
+ document.write("The distance in Inches: "+inch+"<br>");
+}
+
+meter()
+centimeter()
+feet()
+inches();
+</script>
+
+</body>
+</html>

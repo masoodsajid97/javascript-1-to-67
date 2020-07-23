@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<label>First Name:</label><br>
+<input type="text" id="fname" name=""><br>
+
+<label>Last Name:</label><br>
+<input type="text" id="lname" name=""><br><br>
+<button onclick="displayname()">Click</button>
+<p id="result"></p>
+
+<script type="text/javascript">
+	function displayname()
+	{
+		var firstname = document.getElementById("fname").value;
+		var lastname = document.getElementById("lname").value;
+		var fullname = firstname+"\t"+lastname
+		document.getElementById('result').innerHTML = "Welcome "+fullname;
+	}
+</script>
+</body>
+</html>

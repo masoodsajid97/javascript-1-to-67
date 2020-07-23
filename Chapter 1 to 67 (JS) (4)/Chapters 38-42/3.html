@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+var areatriangle = function(side1,side2,side3) {
+	var p = (side1+side2+side3)/2;
+	var a = Math.sqrt(p*(p-side1)*(p-side2)*(p-side3));
+  return a;
+}
+document.write("Area of triangle is: "+areatriangle(3,4,5));
+
+</script>
+</body>
+</html>

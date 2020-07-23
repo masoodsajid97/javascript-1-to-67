@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Factorization</title>
+  <script>
+ function fact(num)
+ {
+    var b = 2;
+    while (num > b){
+    while(num%b==0){
+    num/=b;
+    return b;
+    }
+    b++;
+    if(num==b){
+    return b;
+    }
+    }
+ }
+  </script>
+ </head>
+
+ <body>
+ <form name="f1">
+  Enter the Number  :<input type="number" name="txt1"><br>
+  <input type="button" value="Factorize" onclick="alert('The answer is ' + fact(txt1.value))">
+  </form>
+ </body>
+</html>
